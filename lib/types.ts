@@ -5,7 +5,13 @@ export interface Profile {
   coachNutri: boolean; coachTrainer: boolean;
 }
 export interface PesoRegistro { id: string; userId: string; data: string; peso: number; }
-export interface DadosCorporais { userId: string; idade?: string; sexo?: string; altura?: string; }
+export interface DadosCorporais { 
+  userId: string; 
+  idade?: string; 
+  sexo?: string; 
+  altura?: string;
+  [key: string]: string | undefined;
+}
 export interface ExercicioMidia { tipo: "foto" | "video"; url: string; }
 export interface ExercicioBiblioteca {
   id: string; userId: string; nome: string; grupoMuscular: string;
